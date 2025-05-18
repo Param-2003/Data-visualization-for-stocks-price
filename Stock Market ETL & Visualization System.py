@@ -119,4 +119,3 @@ plt.savefig('bank_data.png')
 #uploading our visualization to AWS S3
 s3 = boto3.resource('s3')
 s3.meta.client.upload_file('bank_data.png', 'your_bucket', 'bank_data.png', ExtraArgs={'ACL':'public-read'})
-
